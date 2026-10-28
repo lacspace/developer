@@ -27,13 +27,13 @@ export function QuickFind() {
           placeholder="Find a package — jwt, money, seo…"
           aria-label="Find a package"
         />
-        <a className="qf-all" href="/packages">Browse all {CATALOG_TOTAL} →</a>
+        <a className="qf-all" href="/packages">Browse all {CATALOG_TOTAL} libraries →</a>
       </div>
       {open && ql && (
         <div className="qf-drop">
           {results.length === 0 ? (
             <div className="qf-empty">
-              No package matches “{q}”. <a href="/packages">Browse all {CATALOG_TOTAL} →</a>
+              No package matches “{q}”. <a href="/packages">Browse all {CATALOG_TOTAL} libraries →</a>
             </div>
           ) : (
             <>

@@ -1,5 +1,6 @@
 import { softwareApp, graph, breadcrumb } from "@lacspace/seo";
 import { DevHeader } from "./components/dev-header";
+import { NPM_TOTAL } from "./lib/counts";
 import { LogoBuild } from "./components/logo-build";
 import { HeroCommand } from "./components/hero-command";
 import { DevFooter } from "./components/dev-footer";
@@ -16,7 +17,7 @@ const PKG = CATALOG_TOTAL;
 const KIT_COUNT = CATALOG.length;
 
 const SHORTCUTS = [
-  { icon: "📦", label: `Browse ${PKG} packages`, href: "/packages" },
+  { icon: "📦", label: `Browse ${PKG} libraries`, href: "/packages" },
   { icon: "🧭", label: "Read the handbook", href: "/handbook" },
   { icon: "🧪", label: "Run the playground", href: "/playground" },
   { icon: "🚀", label: "Scaffold an app", href: "/handbook#scaffold" },
@@ -67,7 +68,7 @@ const SURFACES: Surface[] = [
   {
     icon: "📦",
     title: "npm Packages",
-    desc: `All ${PKG} zero-dependency packages — grouped by kit, with versions and one-line docs.`,
+    desc: `All ${PKG} zero-dependency libraries — grouped by kit, with versions and one-line docs.`,
     href: "/packages",
     cta: "Browse packages",
   },
@@ -159,7 +160,7 @@ export default function Home() {
           <div className="hero-rest" id="start">
           <Reveal>
             <p className="sub">
-              {PKG} zero-dependency, isomorphic TypeScript packages — the standard
+              {PKG} zero-dependency, isomorphic TypeScript libraries — the standard
               library your backend and frontend keep re-inventing — plus a CLI
               that scaffolds a finished Next.js app, and the docs to build with
               all of it.
@@ -171,7 +172,7 @@ export default function Home() {
           <Reveal delay={120}>
             <div className="cta">
               <a className="btn btn-primary" href="/packages">
-                Explore {PKG} packages →
+                Explore {PKG} libraries →
               </a>
               <a className="btn btn-ghost" href="/handbook">
                 Read the handbook
@@ -186,8 +187,8 @@ export default function Home() {
           <Reveal delay={200}>
             <div className="stats">
               <div className="stat">
-                <b className="grad"><Counter to={PKG} /></b>
-                <span>packages</span>
+                <b className="grad"><Counter to={NPM_TOTAL} /></b>
+                <span>npm packages</span>
               </div>
               <div className="stat">
                 <b className="grad"><Counter to={0} /></b>

@@ -1,6 +1,6 @@
 import type { FeedOptions, FeedItem } from "@lacspace/rss";
 import { CATALOG } from "./catalog";
-import { PACKAGE_COUNT } from "./counts";
+import { NPM_TOTAL } from "./counts";
 
 const BASE = "https://developer.lacspace.com";
 const UPDATED = new Date("2026-09-05");
@@ -9,7 +9,7 @@ export const FEED: FeedOptions = {
   title: "Lacspace Packages",
   link: BASE,
   description:
-    `The @lacspace ecosystem — ${PACKAGE_COUNT} zero-dependency, isomorphic TypeScript packages.`,
+    `The Lacspace ecosystem — ${NPM_TOTAL} open-source npm packages: zero-dependency TypeScript libraries and command-line tools.`,
   feedUrl: `${BASE}/rss.xml`,
   language: "en",
   updated: UPDATED,

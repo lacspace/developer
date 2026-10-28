@@ -3,18 +3,18 @@ import { DevFooter } from "../components/dev-footer";
 import { Reveal } from "../components/reveal";
 import { CodeBlock } from "../components/code-block";
 import { site } from "../lib/seo";
-import { PACKAGE_COUNT } from "../lib/counts";
+import { NPM_TOTAL, PACKAGE_COUNT } from "../lib/counts";
 
 const seo = site.page({
   title: "Documentation",
   path: "/docs",
   description:
-    `The documentation home for Lacspace — install and scaffold in seconds, then dive into the per-package reference, the developer handbook, a live playground and the Free Licence. ${PACKAGE_COUNT} zero-dependency packages, one CLI.`,
+    `The documentation home for Lacspace — install and scaffold in seconds, then dive into the per-package reference, the developer handbook, a live playground and the Free Licence. ${NPM_TOTAL} open-source packages, one CLI.`,
 });
 export const metadata = seo.metadata;
 
 const SURFACES = [
-  { icon: "📦", title: "Package reference", d: `Every one of the ${PACKAGE_COUNT} packages — API, exports, install and examples.`, href: "/packages", cta: "Browse packages" },
+  { icon: "📦", title: "Package reference", d: `Every one of the ${PACKAGE_COUNT} libraries — API, exports, install and examples.`, href: "/packages", cta: "Browse packages" },
   { icon: "🎛️", title: "Components gallery", d: "143 React components, charts, data tables and date pickers — every one rendered live, with a theme editor.", href: "/components", cta: "Open the gallery" },
   { icon: "🧭", title: "Developer handbook", d: "Install, use, upgrade, scaffold and ship — guides with runnable recipes.", href: "/handbook", cta: "Open handbook" },
   { icon: "🧪", title: "Live playground", d: "Run packages in your browser — slugify, money, case, humanize, color, id.", href: "/playground", cta: "Open playground" },
@@ -47,7 +47,7 @@ export default function DocsHub() {
             <h1>Everything you need to <span className="grad">build with Lacspace</span></h1>
             <p>
               Install a package or scaffold a whole app in seconds, then go deep with the per-package
-              reference, the handbook and a live playground. {PACKAGE_COUNT} zero-dependency packages, one CLI.
+              reference, the handbook and a live playground. {NPM_TOTAL} open-source packages, one CLI.
             </p>
           </Reveal>
 

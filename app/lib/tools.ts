@@ -1,3 +1,4 @@
+import { TOOL_COUNT } from "./counts";
 /**
  * The Lacspace developer TOOLS catalog — standalone CLIs/libraries (distinct
  * from the @lacspace package library). Data-driven so /tools and /tools/[slug]
@@ -1493,4 +1494,9 @@ export const TOOLS_SOON = TOOLS.filter((t) => t.status === "soon");
 
 export function getTool(slug: string): Tool | undefined {
   return TOOLS.find((t) => t.slug === slug);
+}
+
+// Keep the headline npm total honest: add a live tool and forget lib/counts.ts, and the build stops.
+if (TOOLS_LIVE.length !== TOOL_COUNT) {
+  throw new Error(`TOOL_COUNT in lib/counts.ts is ${TOOL_COUNT}, but lib/tools.ts lists ${TOOLS_LIVE.length} live tools. Update it.`);
 }

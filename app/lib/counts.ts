@@ -10,3 +10,12 @@
  * throws at build time if this number disagrees with it.
  */
 export const PACKAGE_COUNT = 197;
+
+/**
+ * Published command-line tools (the lacspace-* npm packages on /tools).
+ * `lib/tools.ts` throws at build time if this disagrees with its live list.
+ */
+export const TOOL_COUNT = 27;
+
+/** Everything published on npm: the library catalog plus the tools. Matches lacspace.com. */
+export const NPM_TOTAL = PACKAGE_COUNT + TOOL_COUNT;

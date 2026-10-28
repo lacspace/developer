@@ -30,7 +30,7 @@ const MENUS: Menu[] = [
     // 1366x768 laptop, and an absolutely-positioned menu cannot be scrolled to.
     cols: 2,
     items: [
-      { label: `All ${PACKAGE_COUNT} packages`, href: "/packages", desc: "The full catalog" },
+      { label: `All ${PACKAGE_COUNT} libraries`, href: "/packages", desc: "The full library catalog" },
       { label: "Components Kit", href: "/packages?kit=Components+Kit", desc: "components · charts · table · date" },
       { label: "Core Runtime Kit", href: "/packages?kit=Core+Runtime+Kit", desc: "logger · result · events · queue · scheduler · machine" },
       { label: "Sheets Kit", href: "/packages?kit=Sheets+Kit", desc: "formula · xlsx · csv · convert" },
